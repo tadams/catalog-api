@@ -31,7 +31,7 @@ class BookTest {
         assertThat(violations).hasSize(5);
         for (ConstraintViolation<Book> violation : violations) {
             switch (violation.getPropertyPath().toString()) {
-                case "author" : assertThat(violation.getMessage()).contains("author must be defined");
+                case "author" : assertThat(violation.getMessage()).contains("author must be defined - test failure");
                     break;
                 case "isbn" : assertThat(violation.getMessage()).contains("ISBN must be defined");
                     break;
